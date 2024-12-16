@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 20px;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background-color: #313131;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+form{
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input{
+    border: 2px solid #ddd;
+    height: 50px;
+    padding: 0 10px;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 100%;
+}
+
+button, a{
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #313131;
+    color: white;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+button:hover, a:hover{
+    background-color: #202020;
+}
+
+form .select{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.select select{
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#imagem{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagem img{
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.download{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
