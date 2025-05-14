@@ -1,30 +1,30 @@
-const url = document.getElementById('url');
-const tamanho = document.getElementById('tamanho');
-const form = document.getElementById('form');
-const downloadBtn = document.getElementById('download');
-const divImagem = document.getElementById('imagem');
-const divDownload = document.getElementById('download');
+const urlInput = document.getElementById('url');
+const sizeSelect = document.getElementById('size');
+const formElement = document.getElementById('form');
+const downloadButton = document.getElementById('download-button');
+const imageDiv = document.getElementById('image-area');
+const downloadDiv = document.getElementById('download-area');
 
-form.addEventListener('submit', (e) => {
+formElement.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (url.value == '') {
-        alert('Preencha com seu texto ou url')
+    if (urlInput.value == '') {
+        alert('Please enter your text or URL')
     } else {
-        divDownload.style.display = 'flex';
-        divImagem.innerHTML = "";
-        new QRCode(divImagem, {
-            text: url.value,
-            height: tamanho.value,
-            width: tamanho.value,
+        downloadDiv.style.display = 'flex';
+        imageDiv.innerHTML = "";
+        new QRCode(imageDiv, {
+            text: urlInput.value,
+            height: sizeSelect.value,
+            width: sizeSelect.value,
             colorLight: "#fff",
             colorDark: "#000"
         })
-        url.value = "";
+        urlInput.value = "";
     }
 })
 
-downloadBtn.addEventListener('click', () => {
-    const img = document.querySelector('#imagem img');
+downloadButton.addEventListener('click', () => {
+    const img = document.querySelector('#image-area img');
     const imgSrc = img.src;
 
     const link = document.createElement('a');

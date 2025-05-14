@@ -15,13 +15,13 @@
 
 <body>
     <div class="container">
-        <h1>Gerador de QR Code</h1>
+        <h1>QR Code Generator</h1>
         <form id="form">
-            <input type="text" placeholder="Digite seu texto ou sua URL" id="url">
+            <input type="text" placeholder="Enter your text or URL" id="url">
 
             <div class="select">
-                <label for="tamanho">Selecione o tamanho:</label>
-                <select id="tamanho">
+                <label for="size">Select the size:</label>
+                <select id="size">
                     <option value="100">100x100</option>
                     <option value="200">200x200</option>
                     <option value="300">300x300</option>
@@ -35,15 +35,15 @@
                 </select>
             </div>
 
-            <button type="submit">Gerar</button>
+            <button type="submit">Generate</button>
         </form>
 
-        <div class="download" id="download">
-            <div id="imagem">
-            
+        <div class="download" id="download-area">
+            <div id="image-area">
+
             </div>
-    
-            <button id="download">Download</button>
+
+            <button id="download-button">Download</button>
         </div>
 
     </div>
